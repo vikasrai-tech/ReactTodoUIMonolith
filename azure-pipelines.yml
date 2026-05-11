@@ -1,5 +1,6 @@
 trigger: none 
-pool: Telecom_Analyser
+
+pool: Telecom_Analyzer
 
 stages:
   - stage: build

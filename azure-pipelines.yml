@@ -22,3 +22,11 @@ stages:
               PathtoPublish: 'build'
               ArtifactName: 'drop'
               publishLocation: 'Container'
+          - script: |
+                echo "Removing the old files"
+                sudo rm -rf /var/www/html/*
+                echo "copying new build files"
+                sudo cp -r build/* /var/www/html/
+                echo "Restarting Nginx..."
+                sudo systemctl restart nginx 
+            displayName: "Deploy Reach app"

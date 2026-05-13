@@ -3,6 +3,8 @@ pool:
 
 stages:
   - stage: A
+    jobs:
+      - job: jobA
 
   - stage: B
     condition: failed()

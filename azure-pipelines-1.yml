@@ -1,0 +1,13 @@
+pool:
+ vmImage: ubuntu-latest
+
+stages:
+  - stage: A
+    jobs:
+      - job: jobA
+
+  - stage: B
+    condition: failed()
+    jobs:
+      - job: jobB
+    
